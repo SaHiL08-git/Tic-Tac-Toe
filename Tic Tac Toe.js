@@ -2,6 +2,10 @@ let buttons = document.querySelectorAll(".box");
 let reset = document.querySelector("#clear");
 let newbutton = document.querySelector("#new");
 let message = document.querySelector(".champion");
+let playerName=document.querySelector("#newbutton");
+
+let player1 = prompt("Enter Player 1 Name:");
+let player2 = prompt("Enter Player 2 Name:");
 
 let playerChance = true;
 const winner = [
@@ -25,11 +29,10 @@ buttons.forEach((box) => {
     box.addEventListener("click", () => {
         if (playerChance) {
             box.innerText = "X";
-            playerChance = false;
         } else {
             box.innerText = "O";
-            playerChance = true;
         }
+        playerChance = !playerChance;
         box.disabled = true;
         winnerDecider();
     });
@@ -49,7 +52,8 @@ const enableBoxes = () => {
 };
 
 const showWinner = (winner) => {
-    message.innerText = `Congratulations, Player ${winner} won!`;
+    let winnerName = winner === "X" ? player1 : player2;
+    message.innerText = `Congratulations, ${winnerName} won!`;
     message.classList.remove("hide");
     disableBoxes();
 };
@@ -72,5 +76,9 @@ const winnerDecider = () => {
     }
 };
 
-newbutton.addEventListener("click", resetGame);
+newbutton.addEventListener("click", () => {
+    player1 = prompt("Enter Player 1 Name:");
+    player2 = prompt("Enter Player 2 Name:");
+    resetGame();
+});
 reset.addEventListener("click", resetGame);

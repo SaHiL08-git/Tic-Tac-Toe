@@ -2,7 +2,6 @@ let buttons = document.querySelectorAll(".box");
 let reset = document.querySelector("#clear");
 let newbutton = document.querySelector("#new");
 let message = document.querySelector(".champion");
-let playerName=document.querySelector("#newbutton");
 
 let player1 = prompt("Enter Player 1 Name:");
 let player2 = prompt("Enter Player 2 Name:");

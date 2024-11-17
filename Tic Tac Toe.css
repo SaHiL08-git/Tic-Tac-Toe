@@ -1,0 +1,64 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color:gray;
+    text-align: center;
+}
+.fullGame{
+    height:70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    height:60vmin;
+    width:60vmin;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:1.5vmin;
+}
+.box{
+    height:18vmin;
+    width:18vmin;
+    border-radius: 1rem;
+    border:none;
+    background-color:black;
+    color:white;
+    font-size: 40px;
+}
+#clear{
+    color:white;
+    font-size: 20px;
+    height: 50px;
+    width:100px;
+    border-radius: 1rem;
+    border:2px solid white;
+    background-color: black;
+}
+#win{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+.champion{
+    padding: 40px;
+    font-size: 40px;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#new{
+ color:white;
+    font-size: 20px;
+    height: 50px;
+    width:150px;
+    border-radius: 1rem;
+    border:2px solid white;
+    background-color: black;
+    margin-top: 20px;
+}
+.hide{
+    display: none;
+}
